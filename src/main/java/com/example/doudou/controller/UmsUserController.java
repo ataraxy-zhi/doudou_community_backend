@@ -1,6 +1,7 @@
 package com.example.doudou.controller;
 
 import com.example.doudou.common.api.ApiResult;
+import com.example.doudou.model.dto.LoginDTO;
 import com.example.doudou.model.dto.RegisterDTO;
 import com.example.doudou.model.entity.UmsUser;
 import com.example.doudou.service.IUmsUserService;
@@ -33,5 +34,16 @@ public class UmsUserController extends BaseController {
         Map<String, Object> map = new HashMap<>(16);
         map.put("user", user);
         return ApiResult.success(map);
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public ApiResult<Map<String, String>> login(@Valid @RequestBody LoginDTO dto) {
+        String token = iUmsUserService.executeLogin(dto);
+        if (ObjectUtils.isEmpty(token)) {
+            return ApiResult.failed("账号密码错误");
+        }
+        Map<String, String> map = new HashMap<>(16);
+        map.put("token", token);
+        return ApiResult.success(map, "登录成功");
     }
 }
