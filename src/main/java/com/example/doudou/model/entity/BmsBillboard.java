@@ -10,6 +10,9 @@ import lombok.experimental.Accessors;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * 公告板实例类
+ */
 @Data
 @Builder
 @Accessors(chain = true)

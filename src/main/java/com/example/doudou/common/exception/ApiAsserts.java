@@ -3,6 +3,9 @@ package com.example.doudou.common.exception;
 
 import com.example.doudou.common.api.IErrorCode;
 
+/**
+ * 异常
+ */
 public class ApiAsserts {
     /**
      * 抛失败异常

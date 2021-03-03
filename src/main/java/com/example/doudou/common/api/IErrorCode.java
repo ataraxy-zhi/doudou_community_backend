@@ -1,6 +1,8 @@
 package com.example.doudou.common.api;
 
-
+/**
+ * 错误码
+ */
 public interface IErrorCode {
     /**
      * 错误编码: -1失败;200成功

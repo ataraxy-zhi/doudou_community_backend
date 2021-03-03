@@ -2,7 +2,9 @@ package com.example.doudou.common.exception;
 
 import com.example.doudou.common.api.IErrorCode;
 
-
+/**
+ * 异常
+ */
 public class ApiException extends RuntimeException {
     private IErrorCode errorCode;
 

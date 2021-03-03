@@ -7,20 +7,27 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.util.Optional;
 
-
+/**
+ * 封装返回对象
+ *
+ * @param <T>
+ */
 @Data
 @NoArgsConstructor
 public class ApiResult<T> implements Serializable {
 
     private static final long serialVersionUID = -4153430394359594346L;
+
     /**
      * 业务状态码
      */
     private long code;
+
     /**
      * 结果集
      */
     private T data;
+
     /**
      * 接口描述
      */

@@ -1,24 +1,33 @@
 package com.example.doudou.common.api;
 
 
+/**
+ * 错误码
+ * @author
+ */
+
 public enum ApiErrorCode implements IErrorCode {
 
     /**
      * 成功
      */
     SUCCESS(200, "操作成功"),
+
     /**
      * 失败
      */
     FAILED(-1, "操作失败"),
+
     /**
      * 未登录，Token过期
      */
     UNAUTHORIZED(401, "暂未登录或token已经过期"),
+
     /**
      * 权限不足
      */
     FORBIDDEN(403, "权限不足"),
+
     /**
      * 参数校验错误
      */
