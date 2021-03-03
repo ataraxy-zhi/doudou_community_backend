@@ -1,12 +1,12 @@
 package com.example.doudou.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.doudou.model.entity.BmsBillboard;
+import com.example.doudou.model.entity.UmsUser;
 import org.springframework.stereotype.Repository;
 
 /**
- * 公告板数据库映射
+ * 用户信息持久层映射接口
  */
 @Repository
-public interface IBmsBillboardMapper extends BaseMapper<BmsBillboard> {
+public interface UmsUserMapper extends BaseMapper<UmsUser> {
 }

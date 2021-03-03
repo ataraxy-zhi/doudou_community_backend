@@ -17,7 +17,7 @@ import javax.annotation.Resource;
  */
 @RestController
 @RequestMapping("/tip")
-public class BmsTipController extends BaseController{
+public class BmsTipController extends BaseController {
 
     @Resource
     private IBmsTipService bmsTipService;

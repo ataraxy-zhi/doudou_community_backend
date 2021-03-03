@@ -16,7 +16,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/billboard")
-public class BmsBillboardController extends BaseController{
+public class BmsBillboardController extends BaseController {
 
     /**
      * 公告板服务层对象
@@ -26,13 +26,14 @@ public class BmsBillboardController extends BaseController{
 
     /**
      * 获得最新显示通知
+     *
      * @return
      */
     @GetMapping("/show")
-    public ApiResult<BmsBillboard> getNotices(){
-        List<BmsBillboard> list=bmsBillboardService.list(
-                new LambdaQueryWrapper<BmsBillboard>().eq(BmsBillboard::isShow,true));
-        return ApiResult.success(list.get(list.size()-1));
+    public ApiResult<BmsBillboard> getNotices() {
+        List<BmsBillboard> list = bmsBillboardService.list(
+                new LambdaQueryWrapper<BmsBillboard>().eq(BmsBillboard::isShow, true));
+        return ApiResult.success(list.get(list.size() - 1));
     }
 
 }

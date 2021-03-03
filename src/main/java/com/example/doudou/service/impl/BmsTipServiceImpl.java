@@ -1,7 +1,7 @@
 package com.example.doudou.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.doudou.mapper.IBmsTipMapper;
+import com.example.doudou.mapper.BmsTipMapper;
 import com.example.doudou.model.entity.BmsTip;
 import com.example.doudou.service.IBmsTipService;
 import lombok.extern.slf4j.Slf4j;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
  */
 @Slf4j
 @Service
-public class BmsTipServiceImpl extends ServiceImpl<IBmsTipMapper
+public class BmsTipServiceImpl extends ServiceImpl<BmsTipMapper
         , BmsTip> implements IBmsTipService {
 
     @Override

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.example.doudou.mapper.IBmsTipMapper">
+<mapper namespace="com.example.doudou.mapper.BmsTipMapper">
     <select id="getRandomTip" resultType="com.example.doudou.model.entity.BmsTip">
         select *
         from bms_tip

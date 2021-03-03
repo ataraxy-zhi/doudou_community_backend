@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
  * “每日一句”数据库映射接口
  */
 @Repository
-public interface IBmsTipMapper extends BaseMapper<BmsTip>{
+public interface BmsTipMapper extends BaseMapper<BmsTip> {
     // 随机查询一条 SELECT * FROM `bms_post` ORDER BY RAND() LIMIT 1;
     BmsTip getRandomTip();
 }
