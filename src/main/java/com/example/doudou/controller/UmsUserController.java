@@ -1,5 +1,7 @@
 package com.example.doudou.controller;
 
+import static com.example.doudou.jwt.JwtUtil.USER_NAME;
+
 import com.example.doudou.common.api.ApiResult;
 import com.example.doudou.model.dto.LoginDTO;
 import com.example.doudou.model.dto.RegisterDTO;
@@ -45,5 +47,12 @@ public class UmsUserController extends BaseController {
         Map<String, String> map = new HashMap<>(16);
         map.put("token", token);
         return ApiResult.success(map, "登录成功");
+    }
+
+
+    @RequestMapping(value = "/info", method = RequestMethod.GET)
+    public ApiResult<UmsUser> getUser(@RequestHeader(value = USER_NAME) String userName) {
+        UmsUser user = iUmsUserService.getUserByUsername(userName);
+        return ApiResult.success(user);
     }
 }

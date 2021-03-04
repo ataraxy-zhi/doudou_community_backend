@@ -8,7 +8,7 @@ import com.example.doudou.model.dto.LoginDTO;
 import com.example.doudou.model.dto.RegisterDTO;
 import com.example.doudou.model.entity.UmsUser;
 import com.example.doudou.service.IUmsUserService;
-import com.example.doudou.utils.JwtUtil;
+import com.example.doudou.jwt.JwtUtil;
 import com.example.doudou.utils.MD5Utils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
